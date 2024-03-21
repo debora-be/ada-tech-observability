@@ -35,3 +35,15 @@ scrape_configs:
     scrape_interval: 10s
     static_configs:
       - targets: ['grafana:3000']
+
+  - job_name: 'worker'
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['worker:3000']
+
+  - job_name: 'backend'
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['backend:80']
+    
+  
