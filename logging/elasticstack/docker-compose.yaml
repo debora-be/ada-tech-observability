@@ -80,10 +80,10 @@ services:
       - xpack.security.transport.ssl.verification_mode=certificate
       - xpack.license.self_generated.type=${LICENSE}
     mem_limit: ${MEM_LIMIT}
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
+    # ulimits:
+    #   memlock:
+    #     soft: -1
+    #     hard: -1
     healthcheck:
       test:
         [
@@ -153,7 +153,7 @@ services:
     environment:
       - XPACK_MONITORING_ENABLED=false
       - path.config=/usr/share/logstash/logstash_external_configs/pipeline
-    mem_limit: ${MEM_LIMIT}
+    # mem_limit: ${MEM_LIMIT}
      
 volumes:
   certs:
